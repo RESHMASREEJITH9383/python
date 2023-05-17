@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescriptions %}
+   {% if category %}
+     {{category.description|truncatewords:155 }}
+   {% else %}
+      welcome to abc store  we can store  different items.........
+   {% endif %}
+{% endblock %}
+{% block title %}
+   {% if category %}
+      {{category.name}}-ABC store
+   {% else %}
+       see you new collections-ABC STORE
+   {% endif %}
+{% endblock %}
+{% block content %}
+{% if category %}
